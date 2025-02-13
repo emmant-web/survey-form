@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>van Gogh Survey</title>
+  </head>
+  <body>
+    <div class="whole-form">
+      <div class="paintings">
+        <div class="slideshow-container">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+      </div>
+
+      <div class="paintings-form">
+        <h1 id="title">Vincent van Gogh: A Timeless Legacy</h1>
+        <p id="description">
+          Discover Van Gogh’s masterpieces and share your thoughts on his art:
+        </p>
+
+        <hr />
+
+        <form id="survey-form" method="get">
+          <label id="name-label">Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            required
+          />
+          <br />
+
+          <label id="email-label">Email:</label><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="avionschool@example.com"
+            required
+          />
+          <br />
+
+
+          <label for="number" id="number-label">Number:</label><br />
+          <input
+            type="text"
+            placeholder="09171234567"
+            id="number"
+            name="number"
+            pattern="09\d{9}"
+            maxlength="11"
+            inputmode="numeric"
+            required
+          />
+          
+          <label for="age" id="age-label">Age:</label><br />
+          <input
+            type="number"
+            placeholder="18"
+            id="age"
+            name="age"
+            min="18"
+            max="80"
+            inputmode="numeric"
+            required
+          />
+
+          
+
+          <br />
+
+          <label id="dropdown"
+            >Which is your favorite Van Gogh painting?</label
+          ><br />
+          <select name="favorite_painting" required>
+            <option value="" selected disabled>Select a painting</option>
+
+            <option value="sunflowers">Sunflowers</option>
+
+            <option value="cafe-terrace">Café Terrace at Night</option>
+
+            <option value="irises">Irises</option>
+
+            <option value="starry-night">Starry Night</option>
+
+            <option value="potato-eaters">The Potato Eaters</option>
+          </select>
+          <br />
+
+          <label id="radio-label">How does Van Gogh's art make you feel?</label
+          ><br />
+          <div class="radio-group">
+            <input type="radio" name="emotion" value="inspired" required/>
+            Inspired<br />
+            <input type="radio" name="emotion" value="calm" required/> Calm and
+            peaceful<br />
+            <input type="radio" name="emotion" value="melancholic" required/>
+            Melancholic but beautiful<br />
+            <input type="radio" name="emotion" value="energized" required/> Energized
+            and excited<br />
+          </div>
+
+          <label id="checkbox-label"
+            >What do you admire most about Van Gogh's paintings? (Select all
+            that apply)</label
+          ><br />
+          <div class="checkbox-group">
+            <input type="checkbox" name="style" value="colors" /> Vibrant
+            colors<br />
+            <input type="checkbox" name="style" value="brushstrokes" />
+            Expressive brushstrokes<br />
+            <input type="checkbox" name="style" value="emotion" /> Deep emotion
+            in his work<br />
+            <input type="checkbox" name="style" value="subjects" /> Unique
+            choice of subjects<br />
+          </div>
+
+          <label id="comments-label">Additional comments:</label><br />
+          <textarea name="comments"></textarea>
+          <br />
+
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
